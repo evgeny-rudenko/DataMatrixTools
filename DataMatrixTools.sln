@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMatrixPrint", "DataMatrixPrint.csproj", "{42BBC803-EA24-44E0-A417-D09B669B9FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawDatamatrix", "..\DrawDatamatrix\DrawDatamatrix.csproj", "{CF9248DF-A07A-4FAA-85B1-18C3D948318C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42BBC803-EA24-44E0-A417-D09B669B9FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42BBC803-EA24-44E0-A417-D09B669B9FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42BBC803-EA24-44E0-A417-D09B669B9FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42BBC803-EA24-44E0-A417-D09B669B9FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF9248DF-A07A-4FAA-85B1-18C3D948318C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9248DF-A07A-4FAA-85B1-18C3D948318C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9248DF-A07A-4FAA-85B1-18C3D948318C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9248DF-A07A-4FAA-85B1-18C3D948318C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F94F288C-8479-48D4-862E-F39F92EAC61C}
+	EndGlobalSection
+EndGlobal

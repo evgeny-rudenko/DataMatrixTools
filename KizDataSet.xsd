@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KizDataSet" targetNamespace="http://tempuri.org/KizDataSet.xsd" xmlns:mstns="http://tempuri.org/KizDataSet.xsd" xmlns="http://tempuri.org/KizDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="KizDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="KizDataSet" msprop:Generator_UserDSName="KizDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtKiz" msprop:Generator_TableClassName="dtKizDataTable" msprop:Generator_TableVarName="tabledtKiz" msprop:Generator_TablePropName="dtKiz" msprop:Generator_RowDeletingName="dtKizRowDeleting" msprop:Generator_RowChangingName="dtKizRowChanging" msprop:Generator_RowEvHandlerName="dtKizRowChangeEventHandler" msprop:Generator_RowDeletedName="dtKizRowDeleted" msprop:Generator_UserTableName="dtKiz" msprop:Generator_RowChangedName="dtKizRowChanged" msprop:Generator_RowEvArgName="dtKizRowChangeEvent" msprop:Generator_RowClassName="dtKizRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="strKiz" msprop:Generator_ColumnVarNameInTable="columnstrKiz" msprop:Generator_ColumnPropNameInRow="strKiz" msprop:Generator_ColumnPropNameInTable="strKizColumn" msprop:Generator_UserColumnName="strKiz" type="xs:string" minOccurs="0" />
+              <xs:element name="imgKiz" msprop:Generator_ColumnVarNameInTable="columnimgKiz" msprop:Generator_ColumnPropNameInRow="imgKiz" msprop:Generator_ColumnPropNameInTable="imgKizColumn" msprop:Generator_UserColumnName="imgKiz" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
