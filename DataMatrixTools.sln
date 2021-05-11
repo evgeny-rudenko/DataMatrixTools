@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMatrixPrint", "DataMatr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawDatamatrix", "..\DrawDatamatrix\DrawDatamatrix.csproj", "{CF9248DF-A07A-4FAA-85B1-18C3D948318C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMatrixUpdate", "..\DataMatrixUpdate\DataMatrixUpdate.csproj", "{4890AE52-E19C-402C-A74F-FD78F041EC12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CF9248DF-A07A-4FAA-85B1-18C3D948318C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF9248DF-A07A-4FAA-85B1-18C3D948318C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF9248DF-A07A-4FAA-85B1-18C3D948318C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4890AE52-E19C-402C-A74F-FD78F041EC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4890AE52-E19C-402C-A74F-FD78F041EC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4890AE52-E19C-402C-A74F-FD78F041EC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4890AE52-E19C-402C-A74F-FD78F041EC12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

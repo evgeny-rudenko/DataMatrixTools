@@ -86,6 +86,28 @@ namespace MyProject
             this.KizDataSet.Clear();
             rtb.Clear();
 
+
+            if (this.tbGood.Text.Length > 0)
+            {
+
+                for (int i = kiz.Rows.Count - 1; i >= 0; i--)
+                {
+                    DataRow dr = kiz.Rows[i];
+                    if (dr["GOOD_NAME"].ToString().Contains(this.tbGood.Text))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        kiz.Rows.Remove(dr);
+                    }
+                }
+                kiz.AcceptChanges();
+
+                
+
+            }
+
             foreach (DataRow dr in kiz.Rows)
             {
                 
@@ -107,6 +129,8 @@ namespace MyProject
                     MessageBox.Show(ex.Message);
                 }
             }
+
+           
 
             this.dataGridView1.DataSource = kiz;
             this.dataGridView1.Refresh();
@@ -163,6 +187,15 @@ namespace MyProject
         private void cbAllRows_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //this.dataGridView1.DataSource = kiz;
+            this.dataGridView1.Refresh();
+
+            this.reportViewer1.LocalReport.EnableExternalImages = true;
+            this.reportViewer1.RefreshReport();
         }
     }
 }

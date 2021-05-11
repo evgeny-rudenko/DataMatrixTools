@@ -40,6 +40,8 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cbAllRows = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tbGood = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtKizBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KizDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtAllCodesKizBindingSource)).BeginInit();
@@ -60,9 +62,9 @@
             // 
             this.Button.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.Button.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.Button.Location = new System.Drawing.Point(324, 10);
+            this.Button.Location = new System.Drawing.Point(13, 61);
             this.Button.Name = "Button";
-            this.Button.Size = new System.Drawing.Size(133, 47);
+            this.Button.Size = new System.Drawing.Size(187, 47);
             this.Button.TabIndex = 6;
             this.Button.Text = "Сформировать";
             this.Button.Click += new System.EventHandler(this.ButtonClick);
@@ -73,7 +75,7 @@
             this.Input.MaxLength = 3116;
             this.Input.Multiline = true;
             this.Input.Name = "Input";
-            this.Input.Size = new System.Drawing.Size(306, 45);
+            this.Input.Size = new System.Drawing.Size(445, 45);
             this.Input.TabIndex = 3;
             this.Input.Text = "1602/ПН-00004871";
             // 
@@ -106,19 +108,18 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 179);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(444, 536);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 447);
             this.dataGridView1.TabIndex = 12;
             // 
             // cbAllRows
             // 
             this.cbAllRows.AutoSize = true;
-            this.cbAllRows.Location = new System.Drawing.Point(16, 64);
+            this.cbAllRows.Location = new System.Drawing.Point(12, 114);
             this.cbAllRows.Name = "cbAllRows";
             this.cbAllRows.Size = new System.Drawing.Size(215, 17);
             this.cbAllRows.TabIndex = 13;
@@ -126,11 +127,30 @@
             this.cbAllRows.UseVisualStyleBackColor = true;
             this.cbAllRows.CheckedChanged += new System.EventHandler(this.cbAllRows_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(260, 64);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(197, 44);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Обновить печатную форму";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tbGood
+            // 
+            this.tbGood.Location = new System.Drawing.Point(13, 153);
+            this.tbGood.Name = "tbGood";
+            this.tbGood.Size = new System.Drawing.Size(444, 20);
+            this.tbGood.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(1151, 638);
+            this.Controls.Add(this.tbGood);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cbAllRows);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.reportViewer1);
@@ -173,6 +193,8 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.CheckBox cbAllRows;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbGood;
         //private DataSetF3TailTableAdapters.dtAllCodesKizTableAdapter dtAllCodesKizTableAdapter;
     }
 }
