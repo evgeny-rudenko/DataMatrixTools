@@ -93,7 +93,7 @@ namespace MyProject
                 for (int i = kiz.Rows.Count - 1; i >= 0; i--)
                 {
                     DataRow dr = kiz.Rows[i];
-                    if (dr["GOOD_NAME"].ToString().Contains(this.tbGood.Text))
+                    if (dr["GOOD_NAME"].ToString().ToLower().Contains(this.tbGood.Text.ToLower()))
                     {
                         continue;
                     }
@@ -196,6 +196,11 @@ namespace MyProject
 
             this.reportViewer1.LocalReport.EnableExternalImages = true;
             this.reportViewer1.RefreshReport();
+        }
+
+        private void Input_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

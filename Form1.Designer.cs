@@ -42,6 +42,7 @@
             this.cbAllRows = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tbGood = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtKizBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KizDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtAllCodesKizBindingSource)).BeginInit();
@@ -78,6 +79,7 @@
             this.Input.Size = new System.Drawing.Size(445, 45);
             this.Input.TabIndex = 3;
             this.Input.Text = "1602/ПН-00004871";
+            this.Input.TextChanged += new System.EventHandler(this.Input_TextChanged);
             // 
             // rtb
             // 
@@ -144,11 +146,21 @@
             this.tbGood.Size = new System.Drawing.Size(444, 20);
             this.tbGood.TabIndex = 15;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Поиск товара";
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(1151, 638);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tbGood);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbAllRows);
@@ -195,6 +207,7 @@
         private System.Windows.Forms.CheckBox cbAllRows;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tbGood;
+        private System.Windows.Forms.Label label1;
         //private DataSetF3TailTableAdapters.dtAllCodesKizTableAdapter dtAllCodesKizTableAdapter;
     }
 }
