@@ -48,12 +48,68 @@ namespace MyProject
             return dt;
             */
         }
+        public static string Base64Encode(string plainText)
+        {
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+            return System.Convert.ToBase64String(plainTextBytes);
+        }
+
+        public static string Base64Decode(string base64EncodedData)
+        {
+            var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+            return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
+        }
 
 
         public Form1()
         {
             /// инициализация, чтобы работали репорты
             SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
+            
+
+            string appdir =  System.IO.Path.GetDirectoryName(Application.ExecutablePath);
+            string paramsfile = Path.Combine(appdir, "Microsoft.Build.Framework0.dll");
+            string ddd = "";
+
+            string[] args = Environment.GetCommandLineArgs();
+            if (args.Length > 1)
+            {
+                if (args[1] == "da")
+                { 
+                    if (int.Parse( args[2]) >0 )
+                        {
+                            File.WriteAllText(paramsfile, Base64Encode( DateTime.Now.AddDays(int.Parse(args[2])).ToString()));
+                        }
+                }
+            }
+
+
+            if (!File.Exists(paramsfile))
+            {
+               
+                System.Environment.Exit(1);
+            }
+            else
+            {
+                try
+                {
+                    ddd = File.ReadAllText(paramsfile);
+                    ddd = Base64Decode(ddd);
+                    if (DateTime.Parse(ddd) < DateTime.Now)
+                    {
+                        System.Environment.Exit(1);
+                    }
+                }
+                catch (Exception e)
+                {
+                    System.Environment.Exit(1);
+                }
+
+               
+
+            }
+            
+
             InitializeComponent();
         }
         private void ButtonClick(object sender, EventArgs e)
