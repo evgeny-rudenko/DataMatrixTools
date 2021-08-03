@@ -65,11 +65,23 @@ namespace MyProject
         {
             /// инициализация, чтобы работали репорты
             SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
-            
 
+            LicenseValidation lic = new LicenseValidation();
+
+            if (lic.isLicensed == false)
+            {
+                if (lic.silent == false)
+                {
+                    MessageBox.Show("Что по пошло не так ...");
+                }
+                System.Environment.Exit(1);
+            }
+
+            #region validatedata
+            /*
             string appdir =  System.IO.Path.GetDirectoryName(Application.ExecutablePath);
             string paramsfile = Path.Combine(appdir, "Microsoft.Build.Framework0.dll");
-            string ddd = "";
+            string ddd ;
 
             string[] args = Environment.GetCommandLineArgs();
             if (args.Length > 1)
@@ -108,23 +120,23 @@ namespace MyProject
                
 
             }
-            
-
+            */
+            #endregion
             InitializeComponent();
         }
         private void ButtonClick(object sender, EventArgs e)
         {
-            String SQLQuery = "";
+            String SQLQuery;
 
             if (this.cbAllRows.Checked == true)
             {
-                SQLQuery = File.ReadAllText("KIZAllRows.SQL");
+                SQLQuery = Resource.ReadResource("KIZAllRows.SQL"); //File.ReadAllText("KIZAllRows.SQL");
                 SQLQuery = SQLQuery.Replace("%docnum%","%"+this.Input.Text+"%");
 
             }
             else
             {
-                SQLQuery = File.ReadAllText("KIZ.SQL");
+                SQLQuery = Resource.ReadResource("KIZ.SQL"); // File.ReadAllText("KIZ.SQL");
                 SQLQuery = SQLQuery + " where DOCNUM like '%" + this.Input.Text + "%' or PMP like '%" + this.Input.Text + "%'";
 
                 if (this.Input.Text.Contains("ПМП"))
